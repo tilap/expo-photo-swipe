@@ -14,11 +14,11 @@ Swiping is only achieve with react-native components. I had to optimize the swip
 
 ## Screenshots
 
-<a href="./__docs__/list.png"><img src="./__docs__/list.png" alt="Monthly presentation" width="120" height="240"></a>
-<a href="./__docs__/options.png"><img src="./__docs__/options.png" alt="Options" width="120" height="240"></a>
-<a href="./__docs__/keep.png"><img src="./__docs__/keep.png" alt="Monthly presentation" width="120" height="240"></a>
-<a href="./__docs__/drop.png"><img src="./__docs__/drop.png" alt="Monthly presentation" width="120" height="240"></a>
-<a href="./__docs__/confirm.png"><img src="./__docs__/confirm.png" alt="Monthly presentation" width="120" height="240"></a>
+<a href="https://github.com/tilap/expo-photo-swipe/blob/main/__docs__/list.PNG?raw=true"><img src="https://github.com/tilap/expo-photo-swipe/blob/main/__docs__/list.PNG?raw=true" alt="Monthly presentation" width="120" height="240"></a>
+<a href="https://github.com/tilap/expo-photo-swipe/blob/main/__docs__/options.PNG?raw=true"><img src="https://github.com/tilap/expo-photo-swipe/blob/main/__docs__/options.PNG?raw=true" alt="Options" width="120" height="240"></a>
+<a href="https://github.com/tilap/expo-photo-swipe/blob/main/__docs__/keep.PNG?raw=true"><img src="https://github.com/tilap/expo-photo-swipe/blob/main/__docs__/keep.PNG?raw=true" alt="Monthly presentation" width="120" height="240"></a>
+<a href="https://github.com/tilap/expo-photo-swipe/blob/main/__docs__/drop.PNG?raw=true"><img src="https://github.com/tilap/expo-photo-swipe/blob/main/__docs__/drop.PNG?raw=true" alt="Monthly presentation" width="120" height="240"></a>
+<a href="https://github.com/tilap/expo-photo-swipe/blob/main/__docs__/confirm.PNG?raw=true"><img src="https://github.com/tilap/expo-photo-swipe/blob/main/__docs__/confirm.PNG?raw=true" alt="Monthly presentation" width="120" height="240"></a>
 
 ## Getting Started
 
