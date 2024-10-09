@@ -2,6 +2,9 @@ import { useFeatureFlags } from "@contexts/config";
 import { useT } from "@contexts/i18n/index";
 import { useTheme } from "@contexts/theme";
 import { CardStyleInterpolators, createStackNavigator } from "@react-navigation/stack";
+import { Group } from "@screens/Group";
+import { GroupReview } from "@screens/GroupReview";
+import { Groups } from "@screens/Groups";
 import { HomeScreen } from "@screens/Home";
 import React, { lazy } from "react";
 import { enableScreens } from "react-native-screens";
@@ -64,7 +67,7 @@ function AppStack() {
 
   return (
     <Stack.Navigator
-      initialRouteName={Routes.Home}
+      initialRouteName={Routes.Groups}
       screenOptions={{
         ...merge(defaultConfig, theme.screenOptions),
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
@@ -77,6 +80,31 @@ function AppStack() {
         options={{
           headerTitle: t("screens.home.navigationTitle"),
           headerRight: NavbarHeadRightSettings,
+        }}
+      />
+
+      <Stack.Screen
+        name={Routes.Groups}
+        component={Groups}
+        options={{
+          headerTitle: t("screens.groups.navigationTitle"),
+          headerRight: NavbarHeadRightSettings,
+          headerLeft: () => null,
+        }}
+      />
+
+      <Stack.Screen
+        name={Routes.Group}
+        component={Group}
+        options={{
+          headerTitle: "", // Set from the component
+        }}
+      />
+      <Stack.Screen
+        name={Routes.GroupReview}
+        component={GroupReview}
+        options={{
+          headerTitle: t("screens.groupReview.navigationTitle"),
         }}
       />
 

@@ -19,11 +19,13 @@ const config = {
   defaultDarkMode,
   defaultThemeVariant,
   stores: {
+    assets: { name: `assets-store-${process.env.EXPO_PUBLIC_STORES_KEY}` },
     preferences: { name: `preferences-store-${process.env.EXPO_PUBLIC_STORES_KEY}` },
   },
   featureFlags: {
     debugScreen: castEnvToBoolean(process.env.EXPO_PUBLIC_FEATURE_DEBUG_SCREEN),
     resetPreferences: castEnvToBoolean(process.env.EXPO_PUBLIC_FEATURE_RESET_PREFERENCES),
+    resetAppData: castEnvToBoolean(process.env.EXPO_PUBLIC_FEATURE_RESET_APPDATA),
     shareApp: castEnvToBoolean(process.env.EXPO_PUBLIC_FEATURE_SHARE_APP),
     rateApp: castEnvToBoolean(process.env.EXPO_PUBLIC_FEATURE_RATE_APP),
   },

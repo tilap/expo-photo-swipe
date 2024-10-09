@@ -14,7 +14,7 @@ type Context = {
   theme: Theme;
   themeVariant: ThemeVariant;
   setThemeVariant: (_v: ThemeVariant) => void;
-  resetThemeVariant: () => void; // Add reset function type
+  resetThemeVariant: () => void;
 };
 const ThemeContext = React.createContext<Context>({} as unknown as Context);
 

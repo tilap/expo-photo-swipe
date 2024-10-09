@@ -1,5 +1,5 @@
 import { type Dictionary } from "./en";
-import { localeValues, localeValuesWithFlags, themeValues } from "./shared";
+import { app, localeValues, localeValuesWithFlags, themeValues } from "./shared";
 
 const darkmodeValues = {
   dark: "Activé",
@@ -8,8 +8,21 @@ const darkmodeValues = {
 };
 
 export const dictionary: Dictionary = {
-  navigation: {
-    headerBackTitle: "Retour",
+  date: {
+    months: {
+      "1": "Janvier",
+      "2": "Février",
+      "3": "Mars",
+      "4": "Avril",
+      "5": "Mai",
+      "6": "Juin",
+      "7": "Juillet",
+      "8": "Août",
+      "9": "Septembre",
+      "10": "Octobre",
+      "11": "Novembre",
+      "12": "Décembre",
+    },
   },
   screens: {
     about: {
@@ -28,6 +41,42 @@ export const dictionary: Dictionary = {
     },
     debugConfig: {
       navigationTitle: "Debug config",
+    },
+    group: {
+      swiper: {
+        keep: "Garder",
+        drop: "Jeter",
+      },
+    },
+    groups: {
+      navigationTitle: app.name,
+      stats: {
+        totalPictures: {
+          zero: "Aucune photo",
+          one: "Vous avez une photo",
+          other: "Vous avez %{count} photos",
+        },
+      },
+      filterMenu: {
+        title: "Options",
+        sortByDateNewFirst: "Plus récentes d'abord",
+        sortByDateOldFirst: "Plus anciennes d'abord",
+        showFilteredAlbums: "Tous les albums",
+        hideFilteredAlbums: "Les albums à trier",
+        close: "Fermer",
+      },
+      empty: {
+        title: "Bravo !",
+        text: "Vous avez trié vos %{count} photos.",
+      },
+    },
+    groupReview: {
+      navigationTitle: "Confirmation",
+      button: {
+        zero: "Tout garder",
+        one: "Supprimer 1 photo",
+        other: "Supprimer %{count} photos",
+      },
     },
     debugUi: {
       navigationTitle: "Debug UI",
@@ -139,6 +188,15 @@ export const dictionary: Dictionary = {
           values: themeValues,
         },
         about: { label: "À propos" },
+        resetAppData: {
+          label: "Supprimer vos données",
+          confirm: {
+            title: "Réinitialiser les données de l'application",
+            message: "Êtes-vous sur de vouloire réinitialiser toutes les données de l'application?",
+            confirmLabel: "Oui",
+            cancelLabel: "Non",
+          },
+        },
         shareApp: {
           label: "Partager l'application",
           message: "Essaye cette application incroyable!",

@@ -22,7 +22,7 @@ const makeConfig = ({ config }: ConfigContext): ExpoConfig => ({
   splash: {
     image: "./src/assets/images/splash.png",
     resizeMode: "contain",
-    backgroundColor: "#fff7d3",
+    backgroundColor: "#36C2D3",
   },
   ios: {
     bundleIdentifier: "com.tilap.expoboilerplate",
@@ -37,7 +37,7 @@ const makeConfig = ({ config }: ConfigContext): ExpoConfig => ({
   android: {
     adaptiveIcon: {
       foregroundImage: "./src/assets/images/adaptive-icon.png",
-      backgroundColor: "#ffffff",
+      backgroundColor: "#36C2D3",
     },
     package: "com.tilap.expoboilerplate",
     versionCode: 1,
