@@ -1,8 +1,8 @@
 export const themeValues = {
-  stitch: "Stitch",
+  stitch: "Azure",
   flamingo: "Flamingo",
-  grinch: "Grinch",
-  lorax: "Lorax",
+  grinch: "Olive",
+  lorax: "Sunset",
 };
 
 export const localeValues = {
@@ -13,4 +13,8 @@ export const localeValues = {
 export const localeValuesWithFlags = {
   en: "🇬🇧 English",
   fr: "🇫🇷 Français",
+};
+
+export const app = {
+  name: "Photo Swipe",
 };

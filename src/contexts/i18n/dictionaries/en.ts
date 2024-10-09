@@ -1,4 +1,4 @@
-import { localeValues, localeValuesWithFlags, themeValues } from "./shared";
+import { app, localeValues, localeValuesWithFlags, themeValues } from "./shared";
 
 const darkmodeValues = {
   dark: "Enabled",
@@ -7,8 +7,21 @@ const darkmodeValues = {
 };
 
 export const dictionary = {
-  navigation: {
-    headerBackTitle: "Back",
+  date: {
+    months: {
+      "1": "January",
+      "2": "February",
+      "3": "March",
+      "4": "April",
+      "5": "May",
+      "6": "June",
+      "7": "July",
+      "8": "August",
+      "9": "September",
+      "10": "October",
+      "11": "November",
+      "12": "December",
+    },
   },
   screens: {
     about: {
@@ -32,6 +45,42 @@ export const dictionary = {
       navigationTitle: "Debug UI",
       buttons: {
         back: { label: "Back" },
+      },
+    },
+    group: {
+      swiper: {
+        keep: "Keep",
+        drop: "Drop",
+      },
+    },
+    groups: {
+      navigationTitle: app.name,
+      stats: {
+        totalPictures: {
+          zero: "You have no photo",
+          one: "You have one photo",
+          other: "You have %{count} photos",
+        },
+      },
+      filterMenu: {
+        title: "Filter Options",
+        sortByDateNewFirst: "Newest First",
+        sortByDateOldFirst: "Oldest First",
+        showFilteredAlbums: "All albums",
+        hideFilteredAlbums: "Only album to sort",
+        close: "Close",
+      },
+      empty: {
+        title: "Great job!",
+        text: "You've sorted all your %{count} medias",
+      },
+    },
+    groupReview: {
+      navigationTitle: "Review",
+      button: {
+        zero: "Continue",
+        one: "Delete 1 photo",
+        other: "Delete %{count} photos",
       },
     },
     home: {
@@ -138,6 +187,15 @@ export const dictionary = {
           values: themeValues,
         },
         about: { label: "About" },
+        resetAppData: {
+          label: "Reset all app data",
+          confirm: {
+            title: "Reset app data",
+            message: "Are you sure you want to reset all the app data?",
+            confirmLabel: "Reset",
+            cancelLabel: "Cancel",
+          },
+        },
         shareApp: {
           label: "Share the app",
           message: "Check out this awesome app!",

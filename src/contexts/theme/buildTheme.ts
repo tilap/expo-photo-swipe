@@ -17,23 +17,56 @@ type Palette = {
   danger: string;
 };
 
-type ThemeVariantProps = "navigation" | "primary";
-const variants: Record<ThemeVariant, Pick<Palette, ThemeVariantProps>> = {
+type PaletteApp = {
+  keep: string;
+  keepContrast: string;
+  drop: string;
+  dropContrast: string;
+  undo: string;
+  undoContrast: string;
+};
+
+type ThemeVariantProps = "navigation" | "primary" | keyof PaletteApp;
+const variants: Record<ThemeVariant, Pick<Palette & PaletteApp, ThemeVariantProps>> = {
   stitch: {
     navigation: "#0084FF",
     primary: "#0084FF",
+    keep: "#0084FF",
+    keepContrast: "#fff",
+    drop: "red",
+    dropContrast: "#fff",
+    undo: "#ccc",
+    undoContrast: "#fff",
   },
   flamingo: {
     navigation: "#FF8DA1",
     primary: "#FF8DA1",
+    keep: "#FF8DA1",
+    keepContrast: "#fff",
+    drop: "#645AA5",
+    dropContrast: "#fff",
+    undo: "#ccc",
+    undoContrast: "#fff",
   },
   grinch: {
     navigation: "#009688",
     primary: "#009688",
+    keep: "#009688",
+    keepContrast: "#fff",
+    drop: "#f7475c",
+    dropContrast: "#fff",
+    undo: "rgba(0,0,0,.85)",
+    undoContrast: "#fff",
   },
   lorax: {
     navigation: "#FFA500",
     primary: "#FFA500",
+    keep: "#FFA500",
+    keepContrast: "#fff",
+    drop: "#ff3700",
+    dropContrast: "#fff",
+    undo: "#ccc",
+    undoContrast: "#fff",
   },
 };
 
@@ -52,7 +85,7 @@ const palettes: Record<DarkMode, Omit<Palette, ThemeVariantProps>> = {
     danger: "#EE3333",
     subtle: "#8E8E93",
     surface: "#FFFFFF",
-    text: "#1C1C1E",
+    text: "#000",
   },
 };
 
@@ -192,6 +225,12 @@ export function buildTheme(variant: ThemeVariant, darkMode: DarkMode) {
       screen: boxMultiplier * 4,
     },
 
+    overlays: {
+      base: {
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+      },
+    },
+
     components: {
       ActivityIndicator: {
         color: palette.primary,
@@ -220,6 +259,24 @@ export function buildTheme(variant: ThemeVariant, darkMode: DarkMode) {
           borderColor: palette.danger,
           color: "#fff",
         },
+      },
+      ButtonCircleIcon: {
+        keep: {
+          color: palette.keepContrast,
+          backgroundColor: palette.keep,
+        },
+        drop: {
+          color: palette.dropContrast,
+          backgroundColor: palette.drop,
+        },
+        undo: {
+          color: palette.undoContrast,
+          backgroundColor: palette.undo,
+        },
+      },
+      Counter: {
+        backgroundColor: darkMode === "dark" ? "rgba(0,0,0,.7)" : "rgba(255,255,255,.7)",
+        textColor: palette.text,
       },
       List: {
         item: {
@@ -254,6 +311,12 @@ export function buildTheme(variant: ThemeVariant, darkMode: DarkMode) {
       },
       Paper: {
         backgroundColor: palette.surface,
+      },
+      PercentageLine: {
+        backgroundColor: darkMode === "dark" ? "#333" : "#ccc",
+        line: {
+          backgroundColor: palette.primary,
+        },
       },
       Typography: {
         palette: {

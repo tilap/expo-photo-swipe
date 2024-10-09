@@ -22,6 +22,11 @@ const ListEntryResetPreferences = lazy(() =>
     default: module.ListEntryResetPreferences,
   })),
 );
+const ListEntryResetAppData = lazy(() =>
+  import("./ListEntryResetAppData").then((module) => ({
+    default: module.ListEntryResetAppData,
+  })),
+);
 const ListEntryShareApp = lazy(() =>
   import("./components/ListEntryShareApp").then((module) => ({
     default: module.ListEntryShareApp,
@@ -82,9 +87,10 @@ export function SettingsScreen() {
         </Typography>
       </Box>
 
-      {featureFlags.resetPreferences && (
+      {(featureFlags.resetPreferences || featureFlags.resetAppData) && (
         <Paper mb={8}>
-          <List items={[<ListEntryResetPreferences />]} />
+          {featureFlags.resetPreferences && <List items={[<ListEntryResetPreferences />]} />}
+          {featureFlags.resetAppData && <List items={[<ListEntryResetAppData />]} />}
         </Paper>
       )}
 

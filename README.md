@@ -1,42 +1,24 @@
-# React native boilerplate with Expo
+# Expo photo swipe
 
-A bare minimal boilerplate for expo app.
+A simple Expojs app to sort your photo library on iOS/android
 
-- app initialization and assets loader
-- basic navigation and screens so user can set his preferences for localization, theme and dark mode
-- ready to go with your own libs (no store, no ui lib, just go)
+- list your picture by month and year, with filter options
+- keep or delete photo by swiping (Tinder like)
+- confirmation screen before deleting
 
-## What's inside
+## Tech notes
 
-Features:
+This is a project done in a self week-end hackaton for me, myself and I. It is based on one of my template [shared here](https://github.com/tilap/expo-minimal-boilerplate).
 
-- Dark mode
-- Theme
-- i18n ready - with 2 locales for example
-- User preferences screens and storage (with i18n/theme/dark mode)
+Swiping is only achieve with react-native components. I had to optimize the swiper to avoid to much re-renders and keep it smooth even with 1.000 photos.
 
-Comes with common dev tools:
+## Screenshots
 
-- eslint
-- prettier
-- tests with jest
-- husky / conventional commit
-- local logger (you can extends with Sentry and so on)
-
-Keep it bare so:
-
-- No store (bring your own Redux, Zustand, ...). A Zustand one is used for Preferences and can easily be replaced or let working by its own.
-- No ui librariry, just a few bare component (Typography, Box, Button, ...).
-- No account nor business stuff
-
-### Screenshots
-
-[![Home](https://i.postimg.cc/rKwsdNPp/IMG-3620.png)](https://postimg.cc/rKwsdNPp)
-[![Preferences](https://i.postimg.cc/2bdyWcY1/IMG-3621.png)](https://postimg.cc/2bdyWcY1)
-[![Dark mode](https://i.postimg.cc/fSwLfcWB/IMG-3622.png)](https://postimg.cc/fSwLfcWB)
-[![Themes](https://i.postimg.cc/hzRhfFkF/IMG-3623.png)](https://postimg.cc/hzRhfFkF)
-[![Locale](https://i.postimg.cc/w3H7zp5L/IMG-3624.png)](https://postimg.cc/w3H7zp5L)
-[![About](https://i.postimg.cc/75c5rJXZ/IMG-3625.png)](https://postimg.cc/75c5rJXZ)
+<a href="./__docs__/list.png"><img src="./__docs__/list.png" alt="Monthly presentation" width="120" height="240"></a>
+<a href="./__docs__/options.png"><img src="./__docs__/options.png" alt="Options" width="120" height="240"></a>
+<a href="./__docs__/keep.png"><img src="./__docs__/keep.png" alt="Monthly presentation" width="120" height="240"></a>
+<a href="./__docs__/drop.png"><img src="./__docs__/drop.png" alt="Monthly presentation" width="120" height="240"></a>
+<a href="./__docs__/confirm.png"><img src="./__docs__/confirm.png" alt="Monthly presentation" width="120" height="240"></a>
 
 ## Getting Started
 
@@ -50,7 +32,7 @@ Keep it bare so:
 Clone the repository:
 
 ```sh
-git clone https://github.com/tilap/expo-minimal-boilerplate.git
+git clone https://github.com/tilap/expo-photo-swipe.git
 ```
 
 Install dependencies:
